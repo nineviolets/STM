@@ -54,4 +54,21 @@ Path	1	2	3	4	5	6	7	8	9
 
 
 
+Test case Id	:	#02                                                                       	Test Designed By	:	
+Test priority	:	Low	                                                                        Test Designed Date	:	
+Module Name	:	  Login Page                                                                    Test Executed By	:	
+Test Title	:	  White Box			
+Test Executed Date	:				
+Description	:	Test case for problem using Path Testing
+
+pre-condition: Customer should make at least one call
+
+
+
+Stage	          Test Steps         	Test Data      	Expected Result	         Actual Result	    Status(Pass/Fail)	  Remarks
+1                   path 1                    50---------300                        300                 (1-4) -PASS         (1-4)- NILL
+2                   path 2                   130----------310                       310
+3                   path 3                  220-----------394.60                    394.60
+4                   path 4                    270-----------424.50                  424.50
+
 

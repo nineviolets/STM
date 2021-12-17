@@ -69,6 +69,9 @@ Stage	          Test Steps         	Test Data      	Expected Result	         Act
 1                   path 1                    50---------300                        300                 (1-4) -PASS         (1-4)- NILL
 2                   path 2                   130----------310                       310
 3                   path 3                  220-----------394.60                    394.60
-4                   path 4                    270-----------424.50                  424.50
+4                   path 4                    270-----------424.50                  424.50 
+Post Condition: Bill payment of a customer is calculated based on the number of calls
+
+
 
 

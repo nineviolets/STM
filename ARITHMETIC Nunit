@@ -95,11 +95,22 @@ namespace Test
 
 
 table
+
+Test case id: ID_6                                                          Test Designed by: 
+Test Priority: low                                                          Test Designed Date:
+Module Name: Nunit Testing                                                  Test Executed by: 
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using NUnit Testing
+
+
 Pre-Condition: User should give two input numbers  and one expected output
+
 stage(1-4)  teststeps(add,sub,multi,div)    
 testdata(6,4|7,3|2,4|6,3)    
 expected result(10,4,8,2)  
 actual result(10,4,8,3)  
 status(1-4-pass,5-fail)     
 remarks(nil)
+
 Post condition: Expected result should match with value returned by function

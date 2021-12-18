@@ -1,0 +1,48 @@
+Task 10:
+Aim: Identify Web elements using Id, Name and XPath using Selenium IDE.
+Steps:
+1.Search firebug for chrome 🡪 click firebug lite for chrome.
+2. Click add to chrome.
+3.Click add extension.
+4.Open facebook home page. 
+5.Click on firebug.
+6.Click ok.
+7.Click on fire bug again. It will open console below.
+7.Click on inspect button.
+Hover on the required element present on facebook login page, then we will get Class, Id corresponding to that element.
+
+Identifying Web elements using Id using Selenium IDE: 
+i.	Hover on Email or Phone text box field to get its details and copy its ID field from the code.
+ii.	Click on selenium and click record a new test in a new project.
+iii.	Name your project 🡪 Give Facebook home page URL and click Start Recording.
+iv.	Selenium opens the given url and starts recording the action you will be performing in that page.
+(Note: Don’t close that facebook page opened by selenium IDE)
+Now minimize Facebook page.
+v.	Click stop recording 🡪 Give Test Name and click OK.
+vi.	In command field, give verify selected value and in target give id=email. 
+(Note: email is the ID value for email field present in facebook login page which was copied before).
+vii.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Identifying Web elements using Name using Selenium IDE: 
+i.	Now inspect and copy name field value for Email or Phone field.
+ii.	In command field, give verify selected value and in target give name=email.
+iii.	(Note: email is the name value for email field present in facebook home page which was copied before).
+iv.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+
+Identifying Web elements using XPATH using Selenium IDE: 
+i.	Open facebook home page in chrome 🡪Right click 🡪 click inspect.
+ii.	Click inspect element 🡪 select Create a new account element to inspect.
+iii.	Right click on the tag for Create a new account 🡪copy 🡪 copy XPath.
+iv.	Now go to console tab 🡪 give following command.
+$x(‘//*[@id="content"]/div/div/div[1]/div[1]’)
+(Note: //*[@id="content"]/div/div/div[1]/div[1] is the XPath)
+v.	Now click the dropdown and hover on the command 🡪 Create a new account field gets selected.
+Result: Thus, identifying Web elements using Id, Name and XPath using Selenium IDE has been completed successfully.
+
+
+

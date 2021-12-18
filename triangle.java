@@ -66,9 +66,9 @@ assertEquals(s.fun(first,second,third),expected);
 
 table write
  
- Test case id: ID_5                                                                    Test Designed by: Kanishka 
+ Test case id: ID_5                                                                    Test Designed by:  
 Test Priority: low                                                                    Test Designed Date:
-Module Name: Junit Testing                                                   Test Executed by:  Kanishka
+Module Name: Junit Testing                                                             Test Executed by:  
 Test Title: Blackbox testing
 Test Executed Date:
 Description: Test case for problem using Parameterized Testing

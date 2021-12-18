@@ -65,5 +65,17 @@ assertEquals(s.fun(first,second,third),expected);
 
 
 table write
+ 
+ Test case id: ID_5                                                                    Test Designed by: Kanishka 
+Test Priority: low                                                                    Test Designed Date:
+Module Name: Junit Testing                                                   Test Executed by:  Kanishka
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+Pre-Condition: User should give one input number and one expected output
+
+ 
 stage(1-5)    teststep(one valid interger)   testdata(6,13,29,15,9) expected result(01100) actual result(01101)  
 status(pass-(1-4),fail-5) remarks (nill(1-5))
+
+ Post condition: Expected result should match with value returned by function

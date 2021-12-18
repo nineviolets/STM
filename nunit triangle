@@ -1,0 +1,67 @@
+Task 8: Testing visual c# using NUnit.
+Aim: To perform testing visual c# using NUnit.
+Procedure:
+Steps:
+1. Creating Class Library.
+● Click on File and select New project
+● Click on Visual C# and rename it as Triangle64
+● Click on Finish
+2. Add the following code
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Triangle64
+{
+ public class Triangle
+ {
+ public int ischeck(int x, int y,int z)
+ {
+if(x==y && y==z && z==x)
+return 1;
+if(x==y || y==z || z==x)
+return 2;
+else
+ return 3;
+ }
+ }
+}
+
+3. Add new class Library
+● Right click on Project in Solution explorer.
+● Click on Add and New Project(Class Library) 
+● Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Triangle64;
+namespace Test
+{
+ [TestFixture]
+ public class Class1
+ {
+ [Test]
+ public void prs()
+ {
+ Triangle d1=new Triangle();
+ Assert.AreEqual(1, d1.ischeck(5,5,5));
+ }
+ }
+}
+
+4. Add references
+● Right Click on Test and click on Add references
+● Add the Existing Project and also nunit.framework.dll 
+● Click on OK
+5. Build Solution
+● Click on Build
+● Now click on Build Solution
+6. Testing using NUnit
+● Open NUnit and click on File
+● Click on Open project and select the Visual Project
+● Select the test code project.
+● Click on bin and then on debug and then on Test.nunit.dll
+● Click on Run

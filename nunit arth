@@ -1,0 +1,102 @@
+Task 6: Testing visual c# using NUnit.
+Aim: To perform testing visual c# using NUnit.
+Procedure:
+Steps:
+
+1. Creating Class Library.
+● Click on File and select New project
+● Click on Visual C# and rename it as Program1
+● Click on Finish
+
+2. Add the following code
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Leela64
+{
+ public class Addition
+ {
+ public int add(int x, int y)
+ {
+ return (x + y);
+ }
+ }
+ public class Subtraction
+ {
+ public int sub(int x, int y)
+ {
+ return (x - y);
+ }
+ }
+ public class Division
+ {
+ public int div(int x, int y)
+ {
+ return (x / y);
+ }
+ }
+ public class Multiplication
+ {
+ public int mul(int x, int y)
+ {
+ return (x * y);
+ } }
+
+3. Add new class Library
+● Right click on Project in Solution explorer.
+● Click on Add and New Project(Class Library) 
+● Type the following code
+
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Leela64;
+namespace Test
+{
+ [TestFixture]
+ public class Class1
+ {
+ [Test]
+ public void prs()
+ {
+ Multiplication m1 = new Multiplication();
+ Addition a1 = new Addition();
+ Subtraction s1 = new Subtraction();
+ Division d1 = new Division();
+ Assert.AreEqual(20, m1.mul(5, 4));
+ Assert.AreEqual(1, s1.sub(8, 7));
+ Assert.AreEqual(7, a1.add(3, 4));
+ Assert.AreEqual(1, d1.div(5, 5));
+ }
+ [Test]
+ public void prs1()
+ {
+ Multiplication m1 = new Multiplication();
+ Addition a1 = new Addition();
+ Subtraction s1 = new Subtraction();
+ Division d1 = new Division();
+ Assert.AreEqual(10, m1.mul(2, 4));
+ Assert.AreEqual(1, s1.sub(8, 7));
+ Assert.AreEqual(7, a1.add(3, 4));
+ Assert.AreEqual(1, d1.div(5, 5));
+ }}}
+ 
+4. Add references
+● Right Click on Test and click on Add references
+● Add the Existing Project and also nunit.framework.dll 
+● Click on OK
+5. Build Solution
+● Click on Build
+Roll.no:188W1A0590
+V R SIDDHARTHA ENGINEERING COLLEGE
+● Now click on Build Solution
+6. Testing using NUnit
+● Open NUnit and click on File
+● Click on Open project and select the Visual Project
+● Select the test code project.
+● Click on bin and then on debug and then on Test.nunit.dll
+● Click on Run

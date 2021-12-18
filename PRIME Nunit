@@ -63,9 +63,9 @@ namespace Test
 ●	Click on Run
 
 
-Test case id: ID_8                                                               Test Designed by: Kanishka
+Test case id: ID_8                                                               Test Designed by: 
 Test Priority: low                                                                Test Designed Date:
-Module Name: Nunit Testing                                                         Test Executed by: Kanishka
+Module Name: Nunit Testing                                                         Test Executed by: 
 Test Title: Blackbox testing
 Test Executed Date:
 Description: Test case for problem using Parameterized Testing

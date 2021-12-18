@@ -59,3 +59,12 @@ public static Collection<Integer[]>PrimeNumber(){
 }
 
 run the code
+
+
+stage(1-5)     teststep(one valied interger value)	Testdata(6,13,29,15,9)  expected result(0,1,1,0,0)  
+actual result(0,1,1,0,1)  status(pass(1-4),fail-5)   remarks(nil)
+	
+	
+	
+	
+	

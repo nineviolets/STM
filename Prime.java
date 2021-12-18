@@ -59,11 +59,24 @@ public static Collection<Integer[]>PrimeNumber(){
 }
 
 run the code
+Test case id: ID_5                                                                    Test Designed by: Kanishka 
+Test Priority: low                                                                    Test Designed Date:
+Module Name: Junit Testing                                                            Test Executed by:  Kanishka
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
 
+Pre-Condition: User should give one input number and one expected output
 
-stage(1-5)     teststep(one valied interger value)	Testdata(6,13,29,15,9)  expected result(0,1,1,0,0)  
-actual result(0,1,1,0,1)  status(pass(1-4),fail-5)   remarks(nil)
+stage(1-5)    
+teststep(one valied interger value)	
+Testdata(6,13,29,15,9)  
+expected result(0,1,1,0,0)  
+actual result(0,1,1,0,1) 
+status(pass(1-4),fail-5)   
+remarks(nil)
 	
+Post condition: Expected result should match with value returned by function
 	
 	
 	

@@ -1,0 +1,26 @@
+Task 11:
+Aim: To use CSS selectors for identifying Web elements for selenium scripts using Selenium IDE.
+Procedure:
+Steps:
+Using Tag and ID:
+
+i.	Hover on Email or Phone text box field to get its details and copy its ID field from the code.
+ii.	Click on selenium and click record a new test in a new project.
+iii.	Name your project 🡪 Give Facebook home page URL and click Start Recording.
+iv.	Selenium opens the given url and starts recording the action you will be performing in that page.
+(Note: Don’t close that facebook page opened by selenium IDE)
+Now minimize Facebook page.
+v.	Click stop recording 🡪 Give Test Name and click OK.
+vi.	In command field, give verify element present and in target give css=input#email. 
+(Note: email is the ID value for email field present in facebook login page which was copied before. And input is tag name).
+vii.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Using Tag and Class:
+i.	Now inspect and copy class field value for Email or Phone field.
+i.	In command field, give verify element present and in target give css=input.inputtext.
+ii.	(Note: inputtext is the class value for email field present in facebook home page which was copied before. 
+And input is the tag name).
+iii.	Now click on search button beside target field. Now, email field will blink.
+

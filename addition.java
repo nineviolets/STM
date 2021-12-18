@@ -49,3 +49,9 @@ assertEquals(expected,add.addNumbers(first, second));
 	}
 }
  and run the code
+ 
+ 
+ stages(1-5) Test steps(addition)   TestData(6,4|3,3|15,5|13,9|1,1)  expected output(10,6,20,15,5,13,2)  Actual Result(10,6,20,15,5,13,2)   status(1-5)PASS      Remarks(Nil)        
+	 
+	 
+	 

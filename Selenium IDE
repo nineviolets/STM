@@ -1,0 +1,112 @@
+Task 9:
+
+
+Aim: To perform record play back using Selenium IDE Script.
+Description:
+The entire script creation process can be classified into 3 chunks:
+Process 1: Recording – Selenium IDE aids the user to record user interactions with the browser and thus the recorded actions as a whole are termed as Selenium IDE script.
+Process 2: Playing back – In this section, we execute the recorded script so as to verify and monitor its stability and success rate.
+Process 3: Saving – Once we have recorded a stable script, we may want to save it for future runs and regressions.
+Procedure:
+Steps:
+●	Open Google Chrome 🡪 search for Selenium IDE.
+●	Click on CHROME DOWNLOAD.
+●	Click on Add to Chrome.
+●	Click on Add Extension.
+●	Click on Selenium IDE Add-on.
+●	Click Record a new test in a new project.
+●	Enter Project Name and click ok.
+●	Enter Base URL for Mortgage Calculator and click START RECORDING.
+●	It opens Mortgage Calculator home page. It will show the message Selenium IDE is Recording. Perform some action 
+(like scrolling down the page, clicking on something etc) in that page for few seconds. This action will be recorded by Selenium IDE.
+●	Now pause the recording by clicking on the pause symbol present at right side of selenium IDE 
+●	Enter TEST NAME and click OK.
+●	Click on Run all Test Cases. It will open Mortgage Calculator and shows the actions performed by you previously.
+●	It shows message ‘SeleniumTest completed successfully’.
+●	Click save icon 🡪 give name to the file 🡪 click save button 🡪It is saved with side extension. 
+Right click on that .side file 🡪click edit with notepad 🡪Copy the script present in it. This script shows what you have recorded.
+This script is shown as follows.
+      {
+  "id": "ba095580-abf7-4fe9-9247-e91058c872ee",
+  "version": "2.0",
+  "name": "Kan585",
+  "url": "https://www.mortgagecalculator.org",
+  "tests": [{
+    "id": "e66bd618-3cd1-4de0-96f9-c24011ea1fef",
+    "name": "kan",
+    "commands": [{
+      "id": "25547236-6481-49c4-b27a-2f53445ae378",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "9cb83bca-056f-4784-90a6-00c4ef8e5b6c",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "784x865",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "1660cae4-a6f9-4d97-ada6-3ad04522e733",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cal-block > div:nth-child(5)",
+      "targets": [
+        ["css=.cal-block > div:nth-child(5)", "css:finder"],
+        ["xpath=//div[@id='calc']/form/section/section[2]/div/div/div/div/div/div[3]", "xpath:idRelative"],
+        ["xpath=//div[3]", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "acac9a55-c0f6-41c8-85e7-dcc2b92a4b2c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cal-right-box > h2",
+      "targets": [
+        ["css=.cal-right-box > h2", "css:finder"],
+        ["xpath=//div[@id='calc']/form/section/section[2]/div/div/div/div/div/div[4]/div[2]/h2", "xpath:idRelative"],
+        ["xpath=//div[2]/h2", "xpath:position"],
+        ["xpath=//h2[contains(.,'Mortgage Repayment Summary')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "0ab15ec5-d96a-4a6c-9a2a-1165a1d95cf7",
+      "comment": "",
+      "command": "click",
+      "target": "css=.cal-block > div > div > h3",
+      "targets": [
+        ["css=.cal-block > div > div > h3", "css:finder"],
+        ["xpath=//div[@id='calc']/form/section/section[2]/div/div/div/div/div/div[3]/div[2]/h3", "xpath:idRelative"],
+        ["xpath=//h3", "xpath:position"],
+        ["xpath=//h3[contains(.,'View Loan Breakdown')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "509ce264-35c2-44a5-9670-bb18333ecc3d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,190.39999389648438)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "f59188a6-95f7-47cb-a4d1-e2b803c10347",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,190.39999389648438)",
+      "targets": [],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "bc54a933-70eb-448c-9c37-ad2665e67af7",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["e66bd618-3cd1-4de0-96f9-c24011ea1fef"]
+  }],
+  "urls": ["https://www.mortgagecalculator.org/"],
+  "plugins": []
+}

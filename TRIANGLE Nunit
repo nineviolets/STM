@@ -1,0 +1,84 @@
+1.	Creating Class Library.
+●	Click on File and select New project
+●	Click on Visual C# and rename it as Triangle64
+●	Click on Finish
+2.	Add the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Triangle64
+{
+    public class Triangle
+    {
+        public int ischeck(int x, int y,int z)
+        {
+if(x==y && y==z && z==x)
+return 1;
+if(x==y || y==z || z==x)
+return 2;
+else
+      return 3;
+        }
+    }
+}
+
+3.	 Add new class Library
+●	Right click on Project in Solution explorer.
+●	Click on Add and New Project(Class Library) 
+●	Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Triangle64;
+namespace Test
+{
+    [TestFixture]
+    public class Class1
+    {
+        [Test]
+        public void prs()
+        {
+            Triangle d1=new Triangle();
+            Assert.AreEqual(1, d1.ischeck(5,5,5));
+        }
+
+    }
+}
+
+4.	Add references
+●	Right Click on Test and click on Add references
+●	Add the Existing Project and also nunit.framework.dll 
+●	Click on OK
+5.	Build Solution
+●	Click on Build
+●	Now click on Build Solution
+6.	Testing using NUnit
+●	Open NUnit and click on File
+●	Click on Open project and select the Visual Project
+●	Select the test code project.
+●	Click on bin and then on debug and then on Test.nunit.dll
+●	Click on Run
+
+
+table
+Test case id: ID_7                                                             Test Designed by: 
+Test Priority: low                                                             Test Designed Date:
+Module Name: Nunit Testing                                                     Test Executed by: 
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+
+Pre-Condition: User should give one three input numbers  and one expected output
+
+stages(1-5)
+teststeps(three valid integer value)
+testdata(1,1,1|1,2,3|2,9,9|1,1,5|9,9,9)
+expected results(1,3,2,2,1)
+actual(1,3,2,2,3)
+status(pass-1-5,fail-5)
+remarks-nil
+
+Post condition: Expected result should match with value returned by function

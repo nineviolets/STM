@@ -1,0 +1,86 @@
+1.	Creating Class Library.
+●	Click on File and select New project
+●	Click on Visual C# and rename it as Prime64
+●	Click on Finish
+2.	Add the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Prime64
+{
+    public class Prime
+    {
+        public int isPrime(int n)
+  {
+		int c=0;
+		for(int i=1;i<n;i=i+1)
+		{
+			if(n%i==0)
+			c=c+1;
+			if(c>1)
+			return 0;
+		}
+		if(c==1)
+		return 1;
+		return 0;
+} }}
+
+3.	 Add new class Library
+●	Right click on Project in Solution explorer.
+●	Click on Add and New Project(Class Library) 
+●	Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Prime64;
+namespace Test
+{
+    [TestFixture]
+    public class Class1
+    {
+        [Test]
+        public void prs()
+        {
+             Prime	 p=new Prime();
+            Assert.AreEqual(1, p.isPrime(5));
+        }  }
+}
+4.	Add references
+●	Right Click on Test and click on Add references
+●	Add the Existing Project and also nunit.framework.dll 
+●	Click on OK
+5.	Build Solution
+●	Click on Build
+●	Now click on Build Solution
+6.	Testing using NUnit
+●	Open NUnit and click on File
+●	Click on Open project and select the Visual Project
+●	Select the test code project.
+●	Click on bin and then on debug and then on Test.nunit.dll
+●	Click on Run
+
+
+Test case id: ID_8                                                               Test Designed by: Kanishka
+Test Priority: low                                                                Test Designed Date:
+Module Name: Nunit Testing                                                         Test Executed by: Kanishka
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+
+Pre-Condition: User should give one input number  and one expected output
+
+stage(1-5)
+teststeps(6,13,29,15,9)
+testdata(0,1,1,0,0)
+actual result(0,1,1,0,1)
+status(pass-(1-4),fail-5)
+remarks-nill
+
+Post condition: Expected result should match with value returned by function
+
+
+
+

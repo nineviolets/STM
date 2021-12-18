@@ -1,0 +1,1284 @@
+
+
+Task 1: Design a Test case template.
+Task 2: Design test case for following problem using path testing.
+A mobile service provider calculate the bill payment of a customer as follows
+▪	If the number of calls are 120 then minimum payment is 300
+▪	Plus Re.1 for each call for the next 70 calls
+▪	Plus Re.0.82 for each call for the next 50 calls
+▪	Plus Re.0.45 for each call for more than 240 calls
+Task 3: Parameterized testing using JUnit.				
+Task 4: Parameterized testing using JUnit.
+Task 5: Parameterized testing for Triangle using Junit.
+Task 6: Testing visual c# using NUnit.
+Task 7: Testing visual c# using NUnit.
+Task 8: Testing visual c# using NUnit.
+Task 9: To perform record playback using Selenium IDE Script.
+Task 10: Identifying Web elements using Id, Name and XPath using Selenium IDE.
+Task 11: To use CSS selectors for identifying Web elements for selenium scripts using Selenium IDE.
+Task 12: Make a report on Cucumber and CLion.
+
+
+
+
+Task 1: Design a Test case template.
+Aim: To design a test case template for login page validation.
+Project Name: Login Form Validation 
+
+Test case Id	:	#01                                                                       	Test Designed By	:	
+Test priority	:	Low	Test Designed Date	:	
+Module Name	:	Login Page                                                                                                                   	Test Executed By	:	
+Test Title	:	Black Box			
+Test Executed Date	:				
+Description	:	Testing login page
+
+Pre Condition: User should have a valid username and password.
+Stage	Test Steps	Test Data	Expected Result	Actual Result	Status
+(Pass/Fail)	Remarks
+1	Verify Login Page	
+  Username:
+admin
+
+Password:
+abc123	User is navigated to next page	User is navigated to next page	Pass	Nil
+2	Provide valid username				Pass	Nil
+3	Provide Valid Password				Pass	Nil
+4	Verify Login Page	Username:
+swaroop
+
+Password:
+cse123	User is navigated to next page	Shows an
+error
+message	Fail	Nil
+5	Provide valid username				Fail	Username not
+matched
+6	Provide Valid Password				Fail	Password not
+matched
+
+Post Condition: User is verified with database and successfully logged in.
+
+
+
+Output:
+Case 1: Pass
+ 
+
+ 
+Case 2: Fail
+ 
+
+ 
+
+Result: Designing a test case template for login page validation is done successfully.
+
+
+
+Task 2: Design test case for following problem using path testing.
+Aim: To design test case for following problem using path testing.
+Problem:  
+A mobile service provider calculate the bill payment of a customer as follows
+▪	If the number of calls are 120 then minimum payment is 300
+▪	Plus Re.1 for each call for the next 70 calls
+▪	Plus Re.0.82 for each call for the next 50 calls
+▪	Plus Re.0.45 for each call for more than 240 calls
+Program:
+#include<stdio.h>
+
+int main()
+{
+    	int calls, minimum = 300;
+    	float bill;
+    	scanf("%d",&calls);
+
+    	if(calls<=120)
+    	{
+        		bill = minimum ;
+    	}
+    	else if(calls>120 && calls <= 190)
+    	{
+    		bill = minimum + (calls-120)*1 ;
+    	}
+    	else if(calls >190 && calls <=240)
+    	{
+    		bill = minimum + 70 + (calls-190)* 0.82;
+    	}
+    	else
+    	{
+    		bill = minimum + 111 + (calls-240)*0.45;
+    	}
+
+    	printf("Bill is : %f",bill);
+
+return 0;
+}
+
+
+
+Flow graph:
+ 
+
+Cyclomatic Complexity:
+The cyclomatic complexity of the above flow graph is,
+Number of edges=11
+Number of nodes=9
+Therefore, Cyclomatic Complexity = Number of edges-11Number of nodes+2
+         = 11-9+2	
+         = 4
+
+Independents Paths:
+The possible independent paths are,
+Path-1: 1-2-3-9
+Path-2: 1-2-4-5-9
+Path-3: 1-2-6-7-9
+Path-4: 1-2-6-8-9
+
+Test Matrix:
+
+Path	1	2	3	4	5	6	7	8	9
+1	✔	✔	✔						✔
+2	✔	✔		✔	✔				✔
+3	✔	✔				✔	✔		✔
+4	✔	✔				✔		✔	✔
+
+Test suite design:
+
+Project Name: Login Form Validation 
+
+Test case Id	:	#02                                                                       	Test Designed By	:	
+Test priority	:	Low	Test Designed Date	:	
+Module Name	:	Login Page                                                                                                                   	Test Executed By	:	
+Test Title	:	White Box			
+Test Executed Date	:				
+Description	:	Test case for problem using Path Testing
+
+Pre Condition: Customer should make at least one call
+Stage	Test Steps	Test Data	Expected Result	Actual Result	Status
+(Pass/Fail)	Remarks
+1	Path  1	50	300.00	300.00	Pass	Nil
+2	Path 2	130	310.00	310.00	Pass	Nil
+3	Path 3	220	394.60	394.60	Pass	Nil
+4	Path 4	270	424.50	424.50	Pass	Nil
+
+Post Condition: Bill payment of a customer is calculated based on the number of calls
+
+
+Result: To design test case for the problem using path testing is done successfully
+
+
+
+
+Task 3: Parameterized testing using JUnit
+Aim: To perform parameterized testing using JUnit.
+Procedure:
+Steps:
+1.	Creating Java project.
+•	Click on File and select New project
+•	Enter project name as com.vogella.JUnit.Basic
+•	Click on Next and then on Finish
+2.	Creating java Test Project
+•	Right click on com.vogella.JUnit.Basic.
+•	Click on properties and select tab java build path
+•	Click on source and click on Create New Folder.
+•	Give the folder name as Test and click on next.
+•	Click on Finish and then on OK
+3.	Creating java class
+•	Right click on com.vogella.JUnit.Basic and click on New .
+•	Click on class and give the class name as Addition 
+•	Click on Finish
+•	Type the following code
+package com.vogella.JUnit.Basic;
+public class Addition {
+public int addNumbers(int a , int b)
+{
+		int sum=a+b;
+		return sum;
+}
+}
+4.	Create java test class
+•	Right click on com.vogella.JUnit.Basic and click on new
+•	Click on Junit test case.
+•	Change the name of folder src to test in source folder tab.
+•	Click on browse and select Addition class and click on Next.
+•	Click on Finish and then on OK.
+•	Add the following code
+
+package com.vogella.JUnit.Basic;
+import static org.junit.Assert.*;
+import java.util.Arrays;
+import java.util.Collection; 
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+@RunWith(Parameterized.class)
+public class AdditionTest
+{
+private int expected;
+private int first;
+private int second; 
+public AdditionTest(int expectedResult, int firstNumber,
+int secondNumber) {
+this.expected = expectedResult;
+this.first = firstNumber;
+this.second = secondNumber;
+    } 
+@Parameters
+public static Collection<Integer[]> addedNumbers() {
+return Arrays.asList(new Integer[][] { { 10, 6, 4 }, { 6, 3, 3 },
+                { 20, 15, 5 }, { 13, 9, 4 },{2,1,1} });
+}	@Test
+	public void test() 
+		  {
+			Addition add = new Addition();
+			System.out.println("Addition with parameters : " + first + " and "		                + second);
+assertEquals(expected,add.addNumbers(first, second));
+	}
+}
+
+Output:
+
+Pass Case for Addition
+
+ 
+Fail Case for Addition
+
+ 
+Result: Performing parameterized testing using JUnit has been done successfully.
+Task 4: Parameterized testing using JUnit.
+Aim : To perform parameterized testing using Junit
+Procedure:
+Steps:
+1.	Creating Java Project
+●	Click on File and select New project
+●	Enter project name as com.vogella.Junit.Prime
+●	Click on Next and then on Finish
+2.	Creating java Test project
+●	Right click on com.vogella.Junit.Prime
+●	Click on properties and select tab build path
+●	Click on source and click on Create New Folder
+●	Give the folder name as Test and click on next
+●	Click on Finish and then on OK
+3.	Creating java class
+●	Right click on com.vogella.Junit.Prime and click on New
+●	Click on class and give class name as Prime
+●	Click on Finish
+●	Type the following code
+Prime.java
+package com.vogella.JUnit.Prime;
+
+public class Prime 
+{
+public int isPrime(int n)
+{
+	int c=0;
+	for(int i=1;i<n;i=i+1)
+	{
+		if(n%i==0)
+			c=c+1;
+		if(c>1)
+			return 0;
+	}
+	if(c==1)
+		return 1;
+	return 0;
+}
+}
+
+4.Create java test class
+●	Right click on com.vogella.JUnit.Prime and then click on new.
+●	Click on JUnit test case
+●	Change the name of folder src to test in source folder tab
+●	Click on browse and select Prime class and click on Next 
+●	Click on Finish and then on OK
+●	Add the following code
+
+Prime1.java
+package com.vogella.JUnit.Prime;
+import static org.junit.Assert.*;
+import java.lang.reflect.Array;
+import java.util.Arrays;
+import java.util.Collection;
+import org.junit.Test;
+import org.junit.runner.RunWith;
+import org.junit.runners.Parameterized;
+import org.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class Prime1 {
+	private int expected;
+	private int first;
+	public Prime1(int expectedResult,int first)
+	{
+		this.first=first;
+		this.expected=expectedResult;
+	}
+	@Parameters
+public static Collection<Integer[]>PrimeNumber(){
+		return Arrays.asList(new Integer[][]{{1,7},{1,4},{1,3}});
+	}
+	@Test
+	public void testIsPrime() {
+		Prime pr=new Prime();
+		System.out.println("Prime with parameters:"+first);
+		assertEquals(expected,pr.isPrime(first));
+	}
+}
+Output:
+Pass case for Prime
+ 
+Fail case for Prime
+ 
+Test suite design:
+
+Project Name: Parameterized Testing
+Test case id: ID_5	Test Designed by: Mounika
+Test Priority: low	Test Designed Date:22-12-2020
+Module Name: Junit Testing	Test Executed by: Mounika
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+Pre-Condition: User should give one input number  and one expected output
+
+Stage	
+Test Steps	
+Test Data	
+Expected Result	
+Actual Result	status (Pass/Fail)	
+Remarks
+
+1	
+
+
+
+One
+valid
+integer
+value	
+6	
+0	
+0	
+Pass	
+Nil
+
+2		
+13	
+          1	
+      1	
+Pass	
+Nil
+
+3		
+29	
+         1	
+      1	
+Pass	
+Nil
+
+4		
+15	
+0	
+0	
+Pass	
+Nil
+
+5		
+9	
+0	
+1	
+Fail	
+Nil
+Post condition: Expected result should match with value returned by function
+
+
+Result: Performing parameterized testing using Junit has been done successfully.
+
+
+
+
+
+
+
+Task 5:Parameterized testing for Triangle using Junit
+AIM: To perform parameterized testing for Triangle using Junit
+Procedure:
+1.	Creating Java project.
+●	Click on File and select New project
+●	Enter project name as com.vogella.JUnit.Basic
+●	Click on Next and then on Finish
+2.	Creating java class
+●	Right click on com.vogella.JUnit.Basic and click on New .
+●	Click on class and give the class name as Triangle
+●	Click on Finish
+●	Type the following code
+
+packagecom.vogella.JUnit.Basic;
+ 
+public class Triangle {
+ 
+publicint fun(int a, int b, int c)
+{
+if(a==b && b==c)
+return 1;
+else if(a==b || b==c || a==c)
+return 2;
+else
+return 3;
+}
+}
+3.	Creating java Test Project
+●	Right click on com.vogella.JUnit.Basic.
+●	Click on properties and select tab java build path
+●	Click on source and click on Create New Folder.
+●	Give the folder name as Test and click on next.
+●	Click on Finish and then on OK
+ 
+4.	Create java test class
+●	Right click on com.vogella.JUnit.Basic and click on new
+●	Click on Junit test case.
+●	Change the name of folder src to test in source folder tab.
+●	Click on browse and select Addition class and click on Next.
+●	Click on Finish and then on OK.
+●	Add the following code
+
+
+Program:
+
+package com.vogella.JUnit.Basic;
+
+import static org.junit.Assert.*;
+importjava.util.Arrays;
+importjava.util.Collection;
+importorg.junit.Test;
+importorg.junit.runner.RunWith;
+importorg.junit.runners.Parameterized;
+importorg.junit.runners.Parameterized.Parameters;
+
+@RunWith(Parameterized.class)
+public class TriangleTest {
+privateint expected;
+privateint first;
+privateint second;
+privateint third;
+publicTriangleTest(intfirstNumber, intsecondNumber, intthirdNumber, intexpectedResult)
+{
+this.expected = expectedResult;
+this.first = firstNumber;
+this.second = secondNumber;
+this.third = thirdNumber;
+}
+@Parameters
+public static Collection<Integer[]>addNumbers()
+{
+returnArrays.asList(new Integer[][]{
+{4,4,4,1},{1,2,2,1},{7,2,6,3},{1,1,2,2},{7,8,1,3}}
+@Test
+public void testSubNumbers() {
+//fail("Not yet implemented");
+Triangle s= new Triangle();
+System.out.println("Prime check with parameter : "+first);
+assertEquals(s.fun(first,second,third),expected);
+}
+
+}
+
+
+
+
+
+
+OUTPUT:
+
+Case 1:Pass
+
+ 
+
+Case 2:Fail
+
+ 
+
+RESULT:To perform parameterized testing for Triangle using Junit is successfully completed.
+
+
+Task 6: Testing visual c# using NUnit.
+Aim: To perform testing visual c# using NUnit.
+Procedure:
+Steps:
+1.	Creating Class Library.
+●	Click on File and select New project
+●	Click on Visual C# and rename it as Program1
+●	Click on Finish
+2.	Add the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Leela64
+{
+    public class Addition
+    {
+        public int add(int x, int y)
+        {
+            return (x + y);
+        }
+    }
+    public class Subtraction
+    {
+        public int sub(int x, int y)
+        {
+            return (x - y);
+        }
+    }
+    public class Division
+    {
+        public int div(int x, int y)
+        {
+            return (x / y);
+        }
+    }
+
+    public class Multiplication
+    {
+        public int mul(int x, int y)
+        {
+            return (x * y);
+        } }
+3.	 Add new class Library
+●	Right click on Project in Solution explorer.
+●	Click on Add and New Project(Class Library) 
+●	Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Leela64;
+namespace Test
+{
+    [TestFixture]
+    public class Class1
+    {
+        [Test]
+        public void prs()
+        {
+            Multiplication m1 = new Multiplication();
+            Addition a1 = new Addition();
+            Subtraction s1 = new Subtraction();
+            Division d1 = new Division();
+            Assert.AreEqual(20, m1.mul(5, 4));
+            Assert.AreEqual(1, s1.sub(8, 7));
+            Assert.AreEqual(7, a1.add(3, 4));
+            Assert.AreEqual(1, d1.div(5, 5));
+        }
+        [Test]
+        public void prs1()
+        {
+            Multiplication m1 = new Multiplication();
+            Addition a1 = new Addition();
+            Subtraction s1 = new Subtraction();
+            Division d1 = new Division();
+            Assert.AreEqual(10, m1.mul(2, 4));
+            Assert.AreEqual(1, s1.sub(8, 7));
+            Assert.AreEqual(7, a1.add(3, 4));
+            Assert.AreEqual(1, d1.div(5, 5));
+        }}}
+
+4.	Add references
+●	Right Click on Test and click on Add references
+●	Add the Existing Project and also nunit.framework.dll 
+●	Click on OK
+5.	Build Solution
+●	Click on Build
+●	Now click on Build Solution
+6.	Testing using NUnit
+●	Open NUnit and click on File
+●	Click on Open project and select the Visual Project
+●	Select the test code project.
+●	Click on bin and then on debug and then on Test.nunit.dll
+●	Click on Run
+Output:
+Pass Case 
+ 
+
+Fail Case
+
+ 
+
+
+
+Test suite design:
+
+
+
+
+Project Name: NUnit Testing
+Test case id: ID_6	Test Designed by
+Test Priority: low	Test Designed Date:
+Module Name: Nunit Testing	Test Executed by: 
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using NUnit Testing
+Pre-Condition: User should give two input numbers  and one expected output
+
+Stage	
+Test Steps	
+Test Data	
+Expected Result	
+Actual Result	status (Pass/Fail)	
+Remarks
+1	Addition	6,4	10	10	Pass	Nil
+2	Subtraction	7,3	4	4	Pass	Nil
+3	Multiplication	2,4	8	8	Pass	Nil
+4	Division	6,3	2	3	Fail	Nil
+Post condition: Expected result should match with value returned by function
+
+
+
+
+Result: Performing testing visual c# using NUnit has been implemented successfully.
+
+
+
+
+
+
+
+Task 7: Testing visual c# using NUnit.
+Aim: To perform testing visual c# using NUnit.
+Procedure:
+Steps:
+1.	Creating Class Library.
+●	Click on File and select New project
+●	Click on Visual C# and rename it as Prime64
+●	Click on Finish
+2.	Add the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Prime64
+{
+    public class Prime
+    {
+        public int isPrime(int n)
+  {
+		int c=0;
+		for(int i=1;i<n;i=i+1)
+		{
+			if(n%i==0)
+			c=c+1;
+			if(c>1)
+			return 0;
+		}
+		if(c==1)
+		return 1;
+		return 0;
+} }}
+
+3.	 Add new class Library
+●	Right click on Project in Solution explorer.
+●	Click on Add and New Project(Class Library) 
+●	Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Prime64;
+namespace Test
+{
+    [TestFixture]
+    public class Class1
+    {
+        [Test]
+        public void prs()
+        {
+Prime	 p=new Prime();
+            Assert.AreEqual(1, p.isPrime(5));
+        }  }
+}
+
+4.	Add references
+●	Right Click on Test and click on Add references
+●	Add the Existing Project and also nunit.framework.dll 
+●	Click on OK
+5.	Build Solution
+●	Click on Build
+●	Now click on Build Solution
+6.	Testing using NUnit
+●	Open NUnit and click on File
+●	Click on Open project and select the Visual Project
+●	Select the test code project.
+●	Click on bin and then on debug and then on Test.nunit.dll
+●	Click on Run
+Output:
+Pass Case 
+ 
+Fail case
+ 
+
+Test suite design:
+
+Project Name: Parameterized Testing
+Test case id: ID_8	Test Designed by: 
+Test Priority: low	Test Designed Date:
+Module Name: Nunit Testing	Test Executed by: 
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+Pre-Condition: User should give one input number  and one expected output
+
+Stage	
+Test Steps	
+Test Data	
+Expected Result	
+Actual Result	status (Pass/Fail)	
+Remarks
+
+1	
+
+
+
+One
+valid
+integer
+value	
+6	
+0	
+0	
+Pass	
+Nil
+
+2		
+13	
+1	
+1	
+Pass	
+Nil
+
+3		
+29	
+1	
+1	
+Pass	
+Nil
+
+4		
+15	
+0	
+0	
+Pass	
+Nil
+
+5		
+9	
+0	
+1	
+Fail	
+Nil
+Post condition: Expected result should match with value returned by function
+
+Result: Performing testing visual c# using NUnit has been implemented successfully.
+Task 8: Testing visual c# using NUnit.
+Aim: To perform testing visual c# using NUnit.
+Procedure:
+Steps:
+1.	Creating Class Library.
+●	Click on File and select New project
+●	Click on Visual C# and rename it as Triangle64
+●	Click on Finish
+2.	Add the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+namespace Triangle64
+{
+    public class Triangle
+    {
+        public int ischeck(int x, int y,int z)
+        {
+if(x==y && y==z && z==x)
+return 1;
+if(x==y || y==z || z==x)
+return 2;
+else
+      return 3;
+        }
+    }
+}
+
+3.	 Add new class Library
+●	Right click on Project in Solution explorer.
+●	Click on Add and New Project(Class Library) 
+●	Type the following code
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using NUnit.Framework;
+using Triangle64;
+namespace Test
+{
+    [TestFixture]
+    public class Class1
+    {
+        [Test]
+        public void prs()
+        {
+            Triangle d1=new Triangle();
+            Assert.AreEqual(1, d1.ischeck(5,5,5));
+        }
+
+    }
+}
+
+4.	Add references
+●	Right Click on Test and click on Add references
+●	Add the Existing Project and also nunit.framework.dll 
+●	Click on OK
+5.	Build Solution
+●	Click on Build
+●	Now click on Build Solution
+6.	Testing using NUnit
+●	Open NUnit and click on File
+●	Click on Open project and select the Visual Project
+●	Select the test code project.
+●	Click on bin and then on debug and then on Test.nunit.dll
+●	Click on Run
+
+Output:
+Pass Case 
+ 
+Fail Case 
+
+ 
+
+Test suite design:
+Project Name: Parameterized Testing
+Test case id: ID_7	Test Designed by: 
+Test Priority: low	Test Designed Date:
+Module Name: Nunit Testing	Test Executed by: 
+Test Title: Blackbox testing
+Test Executed Date:
+Description: Test case for problem using Parameterized Testing
+Pre-Condition: User should give one three input numbers  and one expected output
+
+Stage	
+Test Steps	
+Test Data	
+Expected Result	
+Actual Result	status (Pass/Fail)	
+Remarks
+
+1	
+
+
+
+Three
+valid
+integer
+value	
+1,1,1	
+1	
+1	
+Pass	
+Nil
+
+2		
+     1,2,3	
+3	
+3	
+Pass	
+Nil
+
+3		
+2,9,9	
+2	
+2	
+Pass	
+Nil
+
+4		
+     1,1,5	
+2	
+2	
+Pass	
+Nil
+
+5		
+     9,9,9	
+1	
+3	
+Fail	
+Nil
+Post condition: Expected result should match with value returned by function
+
+Result: Performing testing visual c# using NUnit has been implemented successfully.
+Task 9:
+Aim: To perform record play back using Selenium IDE Script.
+Description:
+The entire script creation process can be classified into 3 chunks:
+Process 1: Recording – Selenium IDE aids the user to record user interactions with the browser and thus the recorded actions as a whole are termed as Selenium IDE script.
+Process 2: Playing back – In this section, we execute the recorded script so as to verify and monitor its stability and success rate.
+Process 3: Saving – Once we have recorded a stable script, we may want to save it for future runs and regressions.
+Procedure:
+Steps:
+●	Open Google Chrome 🡪 search for Selenium IDE.
+
+ 
+●	Click on CHROME DOWNLOAD.
+●	Click on Add to Chrome.
+ 
+
+●	Click on Add Extension.
+ 
+
+●	Click on Selenium IDE Add-on.
+
+●	Click Record a new test in a new project.
+ 
+
+●	Enter Project Name and click ok.
+ 
+
+●	Enter Base URL for Mortgage Calculator and click START RECORDING.
+   
+●	It opens Mortgage Calculator home page. It will show the message Selenium IDE is Recording. Perform some action (like scrolling down the page, clicking on something etc) in that page for few seconds. This action will be recorded by Selenium IDE.
+
+●	Now pause the recording by clicking on the pause symbol present at right side of selenium IDE 
+
+●	Enter TEST NAME and click OK.
+ 
+●	Click on Run all Test Cases. It will open Mortgage Calculator and shows the actions performed by you previously.
+ 
+
+●	It shows message ‘SeleniumTest completed successfully’.
+ 
+
+●	Click save icon 🡪 give name to the file 🡪 click save button 🡪It is saved with .side extension. Right click on that .side file 🡪click edit with notepad 🡪Copy the script present in it.This script shows what you have recorded. This script is shown as follows.
+{
+  "id": "1a5cd624-6e15-47b8-9b6f-7323c8fc4f51",
+  "version": "2.0",
+  "name": "selenium2",
+  "url": "https://www.mortgagecalculator.org",
+  "tests": [{
+    "id": "84dd2634-dd21-4a9c-84c2-805a73bce5e7",
+    "name": "seleniumtest",
+    "commands": [{
+      "id": "eb38c99e-660d-4a6e-9dbf-5f61d9cb7069",
+      "comment": "",
+      "command": "open",
+      "target": "/",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "3060f9c8-ed29-4492-bf39-35b7590aa6c7",
+      "comment": "",
+      "command": "setWindowSize",
+      "target": "1202x824",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "20f6e239-baca-45c7-898a-dc77b1dca841",
+      "comment": "",
+      "command": "click",
+      "target": "name=cal",
+      "targets": [
+        ["name=cal", "name"],
+        ["css=.rw-box > .styled-button", "css:finder"],
+        ["xpath=//input[@name='cal']", "xpath:attributes"],
+        ["xpath=//div[@id='calc']/form/section/section[2]/div/div/div/div/div/div[4]/div/div/div[18]/input", "xpath:idRelative"],
+        ["xpath=//div[18]/input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a5629a82-6f46-407c-a608-42e534b2e67d",
+      "comment": "",
+      "command": "runScript",
+      "target": "window.scrollTo(0,28.799999237060547)",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "d6af62c6-5d96-43f4-ae73-f6aabe450ba8",
+      "comment": "",
+      "command": "click",
+      "target": "name=loantypebutton",
+      "targets": [
+        ["name=loantypebutton", "name"],
+        ["css=.example12 > .styled-button", "css:finder"],
+        ["xpath=//input[@name='loantypebutton']", "xpath:attributes"],
+        ["xpath=//div[@id='calc']/form/section/section[2]/div/div/div/div/div/div[4]/div/div/div[14]/a/input", "xpath:idRelative"],
+        ["xpath=//div[14]/a/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "a38e2a6a-076b-4d91-97c6-bcc458e35c34",
+    "name": "Default Suite",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["84dd2634-dd21-4a9c-84c2-805a73bce5e7"]
+  }],
+  "urls": ["https://www.mortgagecalculator.org/"],
+  "plugins": []
+}
+Result:
+Thus, performing record play back using Selenium IDE Script has been performed successfully.  
+
+
+
+
+
+
+
+
+
+
+
+
+
+Task 10:
+Aim: Identify Web elements using Id, Name and XPath using Selenium IDE.
+Steps:
+1.Search firebug for chrome 🡪 click firebug lite for chrome.
+
+ 
+
+2. Click add to chrome.
+
+ 
+
+3.Click add extension.
+
+ 
+
+4.Open facebook home page.
+
+ 
+5.Click on firebug.
+
+ 
+
+6.Click ok.
+
+ 
+
+7.Click on fire bug again. It will open console below.
+
+ 
+ 
+
+7.Click on inspect button.
+
+ 
+
+Hover on the required element present on facebook login page, then we will get Class, Id corresponding to that element.
+
+Identifying Web elements using Id using Selenium IDE: 
+i.	Hover on Email or Phone text box field to get its details and copy its ID field from the code.
+
+ 
+
+ii.	Click on selenium and click record a new test in a new project.
+
+ 
+
+iii.	Name your project 🡪 Give Facebook home page URL and click Start Recording.
+
+ 
+
+ 
+
+iv.	Selenium opens the given url and starts recording the action you will be performing in that page.
+(Note: Don’t close that facebook page opened by selenium IDE)
+Now minimize Facebook page.
+
+ 
+
+v.	Click stop recording 🡪 Give Test Name and click OK.
+
+ 
+ 
+
+vi.	In command field, give verify selected value and in target give id=email. 
+(Note: email is the ID value for email field present in facebook login page which was copied before).
+
+ 
+vii.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Identifying Web elements using Name using Selenium IDE: 
+i.	Now inspect and copy name field value for Email or Phone field.
+
+
+ 
+
+
+ii.	In command field, give verify selected value and in target give name=email.
+iii.	(Note: email is the name value for email field present in facebook home page which was copied before).
+
+ 
+
+iv.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Identifying Web elements using XPATH using Selenium IDE: 
+i.	Open facebook home page in chrome 🡪Right click 🡪 click inspect.
+ 
+
+ii.	Click inspect element 🡪 select Create a new account element to inspect.
+
+ 
+
+iii.	Right click on the tag for Create a new account 🡪copy 🡪 copy XPath.
+
+ 
+
+iv.	Now go to console tab 🡪 give following command.
+
+$x(‘//*[@id="content"]/div/div/div[1]/div[1]’)
+
+(Note: //*[@id="content"]/div/div/div[1]/div[1] is the XPath )
+ 
+
+v.	Now click the dropdown and hover on the command 🡪 Create a new account field gets selected.
+
+ 
+
+
+Result:
+Thus, identifying Web elements using Id, Name and XPath using Selenium IDE has been completed successfully.
+
+
+
+
+Task 11:
+Aim: To use CSS selectors for identifying Web elements for selenium scripts using Selenium IDE.
+Procedure:
+Steps:
+Using Tag and ID:
+
+i.	Hover on Email or Phone text box field to get its details and copy its ID field from the code.
+
+ 
+
+ii.	Click on selenium and click record a new test in a new project.
+
+ 
+
+iii.	Name your project 🡪 Give Facebook home page URL and click Start Recording.
+
+ 
+
+ 
+
+iv.	Selenium opens the given url and starts recording the action you will be performing in that page.
+(Note: Don’t close that facebook page opened by selenium IDE)
+Now minimize Facebook page.
+
+ 
+
+v.	Click stop recording 🡪 Give Test Name and click OK.
+
+ 
+
+            
+
+vi.	In command field, give verify element present and in target give css=input#email. 
+(Note: email is the ID value for email field present in facebook login page which was copied before. And input is tag name).
+ 
+vii.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Using Tag and Class:
+i.	Now inspect and copy class field value for Email or Phone field.
+
+
+ 
+
+
+i.	In command field, give verify element present and in target give css=input.inputtext.
+ii.	(Note: inputtext is the class value for email field present in facebook home page which was copied before. And input is the tag name).
+
+ 
+
+iii.	Now click on search button beside target field. Now, email field will blink.
+
+ 
+
+Result:
+Thus, using CSS selectors for identifying Web elements for selenium scripts using Selenium IDE has been completed.
+
+
+Task 12: Make a report on Cucumber and CLion.
+Aim: Report on Cucumber and CLion.
+
+Cucumber:
+●	Cucumber is a testing tool that supports Behavior Driven Development (BDD) framework. It defines application behavior using simple English text, defined by a language called Gherkin.
+●	Cucumber allows automation functional validation that is easily read and understood. Cucumber was initially implemented in Ruby and then extended to Java framework. Both the tools support native JUnit.
+●	How it Works:
+ 
+●	It is a very simple notion, but what we need in order to get this concept implemented. The answer is, Behavior Driven Development (BDD) Framework. Cucumber is one such open source tool, which supports behavior driven development. To be more precise, Cucumber can be defined as a testing framework, driven by plain English text. It serves as documentation, automated tests, and a development aid – all in one.
+●	Feature files: They are the essential part of cucumber which is used to write test automation steps or acceptance tests. This can be used as the live document. The steps are the application specification. All the feature files end with .feature extension.
+●	Feature : This gives information about the high-level business functionality (Refer to the previous example) and the purpose of Application under test. Everybody should be able to understand the intent of feature file by reading the first Feature step. This part is basically kept brief.
+●	Scenario : Basically, a scenario represents a particular functionality which is under test. By seeing the scenario user should be able to understand the intent behind the scenario and what the test is all about. Each scenario should follow given, when and then format. This language is called as “gherkin”.
+1.	Given: As mentioned above, given specifies the pre-conditions. It is basically a known state.
+2.	When: This is used when some action is to be performed. As in above example, we have seen when the user tries to log in using username and password, it becomes an action.
+3.	Then: The expected outcome or result should be placed here. For Instance: verify the login is successful, successful page navigation.
+4.	Background: Whenever any step is required to perform in each scenario then those steps need to be placed in Background. For Instance: If a user needs to clear database before each scenario then those steps can be put in a background.
+5.	And: And is used to combine two or more same type of action.
+
+●	Scenario outline :Scenario outlines are used when the same test has to be performed with different data set. Let’s take the same example. We have to test login functionality with multiple different sets of username and password.
+●	Tags :
+Cucumber by default runs all scenarios in all the feature files. In real time projects, there could be hundreds of feature file which are not required to run at all times.
+For instance: Feature files related to smoke test need not run all the time. So if you mention a tag as smokeless in each feature file which is related to smoke test and runs cucumber test with @SmokeTest tag. Cucumber will run only those feature files specific to given tags. Please follow the below example. You can specify multiple tags in one feature file.
+●	JUnit Runner :
+To run the specific feature file cucumber uses standard JUnit Runner and specify tags in @Cucumber. Options. Multiple tags can be given by using comma separate. Here you can specify the path of the report and type of report you want to generate.
+●	Cucumber Report :
+Cucumber generates its own HTML format. However, better reporting can be done using Jenkins or bamboo tool. Details of reporting are covered in next topic of cucumber.
+●	Advantages :
+1.	It is helpful to involve business stakeholders who can't easily read code
+2.	Cucumber Testing tool focuses on end-user experience
+3.	Style of writing tests allow for easier reuse of code in the tests
+4.	Quick and easy set up and execution
+5.	Cucumber test tool is an efficient tool for testing.
+●	Disadvantages :
+1.	Retrofitting can be time-consuming.
+2.	Time Overhead.
+3.	Structuring all your feature files, scenarios and executable specifications requires some careful planning. 
+4.	There needs to be a good amount of communication between the person writing the feature files and the person developing the automation code. 
+
+CLion:
+●	CLion 2020.3 brings significant, eagerly anticipated improvements to key parts of the development process – code analysis, running and debugging applications, and unit testing. For embedded projects, CLion now comes with initial MISRA C and C++ support. And Qt users can benefit from IDE features tuned specifically for working with Qt code.
+●	CLion is more than just an editor as it offers a powerful debugger and dynamic analysis tools to investigate and solve problems with ease, built-in Google Test, Boost.Test and Catch for unit testing, many popular VCS supported out of the box and more.
+●	Built-in tools and integrations:
+
+1.	Run and Debug : 
+Build, Run and Debug your application and unit tests locally or remotely in CLion. Use the debugger UI with GDB or LLDB as a backend.
+2.	Dynamic analysis : 
+Use Valgrind Memcheck and Google Sanitizers integration to detect memory errors, data races and undefined behaviour issues. Analyze the performance of your application with the CPU Profiler integration.
+3.	CMake support : 
+CMake is a famous cross-platform build system, widely used for C and C++ projects. Benefit from the CLion’s smart CMake support with code generation, completion and automatic target updates.
+4.	Unit testing : 
+CLion supports the Google Test, Boost.Test and Catch frameworks and provides a built-in test runner together with a powerful UI to investigate test results. It can even generate code for you as you write tests (for Google Test).
+5.	Embedded Development : 
+Develop for microcontrollers in CLion and benefit from various on-chip debugging options, Peripheral View for ARM devices, and STM32CubeMX integration.
+6.	VCS integration and local history :
+ CLion provides a unified interface for most popular VCS including Subversion, Git, GitHub, Mercurial, CVS, and Perforce. Meanwhile, local history will save you from unexpected accidents.
+
+
+●	Advantages :
+
+1.	It’s surprisingly easy to start a new project in CLion, and files can be added to the project in one click. CLion works with CMake, Gradle and compilation database project models. If you use a different type of project, the IDE will help you import to CMake.
+2.	With an IDE that analyzes the context and understands your project, you can code faster than you think. Try smart completion, formatting and helpful views with code insight.
+3.	Find your way through the code with instant navigation to a symbol, class or file. Inspect the calls or types hierarchy and easily search everywhere for nearly everything .
+4.	Save time on unnecessary typing while CLion generates code for you: from getters/setters to more complicated templates. Use refactorings to improve and clean up your code at the speed of thought.
+
+Result:
+Successfully created report on Cucumber and CLion .
+

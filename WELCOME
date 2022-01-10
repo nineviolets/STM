@@ -44,7 +44,7 @@ else
 {
 
 
-window.open("C:/Users/Katta Kanishka/Desktop/kayKay/SEM_7/4 STM/STM lab/welcome.html");
+window.open("C:/Users/welcome.html");
 
 }
 }

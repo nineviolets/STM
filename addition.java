@@ -59,11 +59,7 @@ Description: Test case for problem using Parameterized Testing
 
 Pre-Condition: User should give one input number and one expected output
  
-stages(1-5) Test steps(addition)   
-TestData(6,4|3,3|15,5|13,9|1,1)  
-expected output(10,6,20,15,5,13,2)
-Actual Result(10,6,20,15,5,13,2)   
-status(1-5)PASS      
-Remarks(Nil)        
+stages(1-5) 		Test steps(addition)   		TestData(6,4|3,3|15,5|13,9|1,1)  	expected output(10,6,20,15,22,2)
+Actual Result(10,6,20,15,22,2)   	status(1-5)PASS      Remarks(Nil)        
 	 
 Post condition: Expected result should match with value returned by function

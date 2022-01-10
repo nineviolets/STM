@@ -95,9 +95,9 @@ document.getElementById("pwd1").value="";
  
 project name:login form
  
-Test case Id	:	#01                                                                       	Test Designed By	:	Kanishka
-Test priority	:	Low	                                                                        Test Designed Date	:	
-Module Name	:	Login Page                                                                    Test Executed By	:	Kanishka
+Test case Id	:	#01                                                                             Test Designed By	:	
+Test priority	:	Low	                                                                       Test Designed Date	:	
+Module Name	:	Login Page                                                                    Test Executed By	:	
 Test Title	:	Black Box			
 Test Executed Date	:				
 Description	:	Testing login page
@@ -107,16 +107,17 @@ Pre-condition : user should have a vailed username and password
 stage                          test steps                testdata                             expected result             actual result                   status(PASS/FAIL)           REMARKS                        
 
   1-3                         1.Verify Login Page           Username:admin          User is navigated to next page	      User is navigated to next page  PASS(ALL 1,2,3)           nill
-	                                                          Password:abc123
+	                                                    Password:abc123
 
                               2.Provide valid username
                               3.Provide Valid Password
+			      
                               
- 4-6                          verify login page            Username: swaroop
-                                                           Password: cse123
-                                                                                     user is navigated to next page                       show error            FAIL 
-                              provide a username
-                              provide a password     
+ 4-6                         4. verify login page            Username: swaroop
+                                                             Password: cse123
+                                                                                   user is navigated to next page                       show error            FAIL 
+                              5.provide a username
+                              6.provide a password     
 
 
 

@@ -75,7 +75,7 @@ Description: Test case for problem using Parameterized Testing
 Pre-Condition: User should give one input number and one expected output
 
  
-stage(1-5)    teststep(one valid interger)   testdata(6,13,29,15,9) expected result(01100) actual result(01101)  
-status(pass-(1-4),fail-5) remarks (nill(1-5))
+stage(1-5)    teststep(one valid interger)   testdata(4,4,1|2,2,2|2,6,3|1,2,2|8,1,3) expected result(4,1,7,1,7) actual result(4,1,7,1,7)  
+status(pass-(1-5) remarks (nill(1-5))
 
  Post condition: Expected result should match with value returned by function
